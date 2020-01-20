@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+}
+
+body
+{
+  height: 100vh;
+  background: url(Images/fondo.jpg) no-repeat center center fixed;
+  background-size: cover;
+  /*these are for different browsers*/
+  -webkit-background-size: cover; 
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  display: flex;
+  
+}
+
+
+.board
+{
+  height: 400px;
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  perspective: 1000px;
+  justify-content: space-evenly;
+}
+
+.card
+{
+  width: calc(16%);
+  height: calc(33.33%);
+  position: relative;
+  transform:scale(1);
+/*   transform-style: preserve-3d;
+ */  transition: transform .5s;
+}
+
+.card:active
+{
+  transform: scale(.92);
+  transition: transform .3s;
+}
+
+.card.flip
+{
+  transform: rotateY(180deg);
+}
+
+.back-face,
+.front-face
+{
+  width: 100%;  
+  position: absolute;
+  padding: 20px;
+  backface-visibility: hidden;
+}
+
+.front-face
+{
+  transform: rotateY(180deg);
+ /*  Added z index */
+  z-index:11;
+}
+.d-none {
+  display:none;
+}
+.d-block {
+  display:block;
+}
