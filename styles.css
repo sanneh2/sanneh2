@@ -56,7 +56,6 @@ body
   width: 100%;  
   position: absolute;
   padding: 20px;
-  backface-visibility: hidden;
 }
 
 .front-face
